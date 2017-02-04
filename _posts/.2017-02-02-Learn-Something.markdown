@@ -1,0 +1,10 @@
+---
+layout: post
+title: Learn Something
+---
+
+## I'm Trying to learn ..
+1. Distributed System
+2. Apache Hadoop (little bit)
+3. Apache Spark (maybe mainly)
+4. cluster computing
