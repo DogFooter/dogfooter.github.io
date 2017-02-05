@@ -28,6 +28,12 @@ google_analytics: UA-91398386-1
 disqus: 
     shortname: https-dogfooter-github-io
 
+# Navigation
+nav:
+    - name:           "About"
+      url:            "/about"
+    - name:           "Tags"
+      url:            "/tags"
 # Build settings
 markdown: kramdown
 theme: minima

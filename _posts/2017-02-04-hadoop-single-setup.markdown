@@ -1,6 +1,15 @@
 ---
 layout: post
 comments: true
+tags:
+    - 하둡
+    - Hadoop
+    - 클러스터
+    - cluster
+    - 번역
+    - Doc
+    - 분산시스템
+    - HDFS
 title: '[번역] 하둡: 싱글 노드 클러스터를 설정하자'
 ---
 
@@ -211,3 +220,6 @@ $ chmod 0600 ~/.ssh/authorized_keys
 
 다음 번 자료에서 소개할 것이다. (cluster setup)
 
+
+[1]: https://wiki.apache.org/hadoop/Hadoop2OnWindows
+[2]: https://wiki.apache.org/hadoop/HadoopJavaVersions
