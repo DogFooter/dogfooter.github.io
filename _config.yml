@@ -16,9 +16,8 @@
 title: dogfooter [개-발자]
 email: dogfooter219@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    dogfooter는 dog의 '개'와 foot의 '발'을 합쳐 dogfoot의 '개발'이란 단어를 만들고 뒤에 er을 붙여 '~하는 사람'이라 하여 개발하는 사람 즉 개발자라는 의미를 갖게되었습니다.
+    열심히 공부하는 작은 학부생입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dogfooter.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  dogfooter
