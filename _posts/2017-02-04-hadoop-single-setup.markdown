@@ -7,32 +7,39 @@ title: '[번역] 하둡: 싱글 노드 클러스터를 설정하자'
 원글 : http://hadoop.apache.org/docs/r2.7.3/hadoop-project-dist/hadoop-common/SingleCluster.html
 
 ## 목적
+
 이 문서는 싱글 노드 하둡 설치를 어떻게 설정하고 구성하는지 설명한다. 이번 문서를 통해 간단한 하둡 맵리듀스 혹은 하둡 분산 파일 시스템(HDFS)를 짧은 시간내에 구동해 볼 수 있다.
 
 ## 미리 준비할 것
 
 ### 지원하는 플랫폼
+
 * GNU/Linux는 개발 생산 플랫폼으로 지원한다. 하둡은 2000개의 노드들을 가진 GNU/Linux cluster에서 데모 시연되었다.
 * Windows도 지원된다. 그러나 이번에 작성된 내용들은 리눅스 기준으로 작성되었습니다. 윈도우에서의 하둡은 여기 [위키][1]에서 확인할 수 있다.
 
 ### 필요한 소프트웨어
+
 리눅스를 포함해서 필요한 소프트웨어는 다음과 같다.
 
 1. Java가 필수적으로 설치되어 있어야한다. 권장하는 Java의 버전은 [HadoopJavaVersions][2]에서 설명한다.
 2. ssh가 무조건 설치되어 있어야한다. 그리고 sshd는 하둡 데몬들을 관리하는 하둡 스크립트를 사용하기위해  무조건 실행되고 있어야한다.
 
 ### 소프트웨어 설치
+
 만약 당신의 클러스터에 필수 소프트웨어가 없다면 설치해야한다.
 Ubuntu Linux를 예시로
+
 ```bash
 $ sudo apt-get install ssh
 $ sudo apt-get install rsync
 ```
 
 ## 다운로드
+
 하둡 배포판을 받기위해서 최신 안정판(recent stable release)을 [ Apache Download Mirrors ] 중 한곳에서 다운로드 받는다.
 
 ## 하둡 클러스터를 시작하기 전 준비
+
 하둡 배포판의 압축을 해제한다. 인자값들을 정의하기 위해 배포판 안에있는 파일중 `` etc/hadoop/hadoop-env.sh ``를 다음과 같이 수정한다.
 
 ```bash
@@ -55,6 +62,7 @@ $ bin/hadoop
 * Fully-Distributed Mode
 
 ## Standalone Operation
+
 기본 설정으로 하둡은 분산되지 않은 모드, 하나의 Java 프로세스로서 실행하게 구성되어있다. 이는 디버깅에 매우 유용한다.
 다음의 예제는 conf 디렉토리를 인풋으로 이용하여 주어진 정규표현식에 부합하는 결과물을 보여주는것이다. 아웃풋은 주어진 아웃풋 디렉토리에 작성되어진다.
 
@@ -68,7 +76,9 @@ $ cat output/*
 ## Pseudo-Distributed Operatoin
 
 하둡은 또한 싱글 노드에서 가상의 분산환경 모드를 지원한다. 하둡 데몬들은 각각 분리된 자바 프로세스로 작동한다.
+
 ### 구성
+
 다음에 오는것을 사용하라.
 
 ``etc/hadoop/core-site.xml``:
@@ -94,10 +104,13 @@ $ cat output/*
 ```
 
 ### passphraseless ssh (암호 없는 ssh) 설정
+
 이제 localhost로 암호 없이 ssh 접속이 가능한지 체크해본다.
+
 ```bash
 $ ssh localhost
 ```
+
 만약 암호없이 접근할 수 없다면, 다음 명령을 실행하라.
 
 ```bash
@@ -107,6 +120,7 @@ $ chmod 0600 ~/.ssh/authorized_keys
 ```
 
 ### 실행
+
 다음은 맵리듀스 잡(job)을 로컬에서 실행하는 방법이다. 만약 YARN에서 실행하고 싶다면. YARN on Single Node를 보라.
 
 1. 파일시스템 포맷
@@ -153,6 +167,7 @@ $ chmod 0600 ~/.ssh/authorized_keys
 		$ sbin/stop-dfs.sh
 
 ### YARN on Single Node
+
 맵 리듀스 잡(job)을 YARN위에서 pseudo-distributed 모드로 실행할 수 있다. 몇 개의 인자를 바꾸어주고 리소스 매니저 데몬과 노드매니저 데몬을 추가적을 쇨행시키면 된다.
 
 위에서 본 1 ~ 4까지의 순서는 이미 실행했다고 가정한다.
