@@ -33,15 +33,19 @@ $ sudo apt-get install rsync
 하둡 배포판을 받기위해서 최신 안정판(recent stable release)을 [ Apache Download Mirrors ] 중 한곳에서 다운로드 받는다.
 
 ## 하둡 클러스터를 시작하기 전 준비
-하둡 배포판의 압축을 해제한다. 인자값들을 정의하기 위해 배포판 안에있는 파일중 ```etc/hadoop/hadoop-env.sh```를 다음과 같이 수정한다.
+하둡 배포판의 압축을 해제한다. 인자값들을 정의하기 위해 배포판 안에있는 파일중 `` etc/hadoop/hadoop-env.sh ``를 다음과 같이 수정한다.
+
 ```bash
 # Java가 설치된 root 디렉토리를 설정한다
 export JAVA_HOME=/usr/java/latest
 ```
+
 다음 명령을 실행해보자.
+
 ```bash
 $ bin/hadoop
 ```
+
 하둡 스크립트를 위한 사용법을 보여줄것이다.
 
 이제 하둡 클러스터를 시작하기 위한 다음의 세 가지 방법 중 하나를 시도해 볼 준비가 되었다.
@@ -53,6 +57,7 @@ $ bin/hadoop
 ## Standalone Operation
 기본 설정으로 하둡은 분산되지 않은 모드, 하나의 Java 프로세스로서 실행하게 구성되어있다. 이는 디버깅에 매우 유용한다.
 다음의 예제는 conf 디렉토리를 인풋으로 이용하여 주어진 정규표현식에 부합하는 결과물을 보여주는것이다. 아웃풋은 주어진 아웃풋 디렉토리에 작성되어진다.
+
 ```bash
 $ mkdir input
 $ cp etc/hadoop/*.xml input
