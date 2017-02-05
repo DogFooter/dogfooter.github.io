@@ -25,6 +25,8 @@ github_username:  dogfooter
 gitlab_username:  dogfooter
 
 google_analytics: UA-91398386-1
+disqus: 
+    shortname: https-dogfooter-github-io
 
 # Build settings
 markdown: kramdown

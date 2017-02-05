@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: '[번역] 하둡: 싱글 노드 클러스터를 설정하자'
 ---
 
