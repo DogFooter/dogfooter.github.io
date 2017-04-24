@@ -1,8 +1,10 @@
 ---
 layout: post
-title: '[domain] midterm 정리
+title: '[domain] midterm 정'
 comments: true
+tags: [domain]
 ---
+
 # 1장
 
 ## Software process
