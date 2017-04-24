@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: [domain] midterm 정리
+title:'[domain] midterm 정리'
 ---
 # 1장
 
