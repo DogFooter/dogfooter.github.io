@@ -17,7 +17,7 @@ xinput
 
 xinput 명령어를 통해서 현재 잡혀있는 입력디바이스 (마우스, 키보드)를 확인한다.
 
-![xinput_img](./image/xinput.png)
+![xinput_img](./img/xinput.png)
 
 만일 Elantech Touchpad라는 기기가 보인다면 다음에 제시한 방법으로 문제를 해결해보자.
 
