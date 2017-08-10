@@ -3,7 +3,7 @@ title: dogfooter [개-발자]
 description: > # this means to ignore newlines until "baseurl:"
     dogfooter는 dog의 '개'와 foot의 '발'을 합쳐 dogfoot의 '개발'이란 단어를 만들고 뒤에 er을 붙여 '~하는 사람'이라 하여 개발하는 사람 즉 개발자라는 의미를 갖게되었습니다.
     열심히 공부하는 작은 학부생입니다.url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno/'
+baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
