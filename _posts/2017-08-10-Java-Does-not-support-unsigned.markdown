@@ -104,7 +104,7 @@ for (int i = 0; i < binaryArray.length; i +=4) {
 int type 으로 캐스팅해준 값에 0xFF를 AND 해주었다. 이를 마스킹(masking)이라고 하는데 간단히 말하면 비트 시퀀스에서 원하는 값을 뽑아오는 걸 말한다.  즉 마스킹을 이용하여 뒤의 AC만 살리고 나머지는 0으로 만들어 integer에서 172를 의미하게 만드는 것이다.
 
 ```java
-	0xFFFFFFAC
+    0xFFFFFFAC
 AND 0x000000FF
 ---------------
  =  0x000000AC
