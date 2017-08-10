@@ -28,8 +28,7 @@ unsigned를 사용할 때도 딱히 의도하고 사용한 것이 아닌 API에�
 integer1.toUnsignedLong()
 ```
 
-# 그래도 나는 unsigned를 원한다
-
+# 그래도 나는 unsigned를 원한다 
 Unsigned type을 그래도 사용해야 할 상황이 생긴다. 위에서 말한 Checksum을 구하는 경우 unsigned로 표현하여 출력해줘야 할 경우가 생긴다. 이럴 경우 어떻게 Unsigned type을 사용해야 하는지 알아보자.
 
 ## Unsigned Integer
