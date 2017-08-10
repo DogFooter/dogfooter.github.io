@@ -2,7 +2,12 @@
 layout: post
 comments: true
 title: '[번역] 하둡 클러스터 셋업 다중 노드'
-tags: [하둡, Hadoop]
+tag: [하둡, Hadoop]
+category: blog
+date: 2017-02-05 13:55
+headerImage: false
+author: dogfooter
+comments: true
 ---
 
 ## 목적

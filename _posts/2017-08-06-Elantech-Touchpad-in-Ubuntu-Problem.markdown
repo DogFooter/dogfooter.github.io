@@ -2,7 +2,12 @@
 layout: post
 comments: true
 title: 'Elantech 터치패드를 사용하는 우분투 랩탑, 먹통 해결법'
-tags: [Ubuntu, Elantech, Touchpad, Ubuntu 16.04.2 LTS]
+tag: [Ubuntu, Elantech, Touchpad, Ubuntu 16.04.2 LTS]
+category: blog
+date: 2017-08-06 15:00
+headerImage: false
+author: dogfooter
+comments: true
 ---
 
 펜티엄 프로세서 노트북에서 윈도우에 linux vm을 쓰며 생활했지만, 한계가 보였다. 그래서 갈아엎었다. 우분투로.

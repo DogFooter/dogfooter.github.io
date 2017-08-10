@@ -1,7 +1,12 @@
 ---
 layout: post
 title: 분산 시스템에서의 Transparency
-tags: [분산 시스템, Distributed system, Transparency]
+tag: [분산 시스템, Distributed system, Transparency]
+comments: true
+category: blog
+date: 2017-02-09 11:15
+headerImage: false
+author: dogfooter
 comments: true
 ---
 
