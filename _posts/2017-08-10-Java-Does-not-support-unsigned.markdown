@@ -10,7 +10,7 @@ Java에서는 기본적으로 unsigned type을 지원하지 않는다. 모든 ty
 인턴업무 중 font의 subset을 만들며 checksum을 수정해야 할 일이 있었다. 해당 font type의 reference에서는 C를 기준으로 unsigned type을 사용하는 checksum 알고리즘을 제공했다. 이를 계기로 Java로 unsigned를 처음 다뤄보게 되었는데 그 후기를 작성하고자 한다.
 
 
-# 왜 자바는 unsigned type을 지원하지 않는거야?
+## 왜 자바는 unsigned type을 지원하지 않는거야?
 
 가장 큰 의문이었다. C처럼 언어차원에서 지원해주면 쉽게 해결될 문제일 거라 생각했다. 자바를 개발한 고슬링은 unsigned에 대하여 이렇게 언급했다.
 
@@ -28,10 +28,10 @@ unsigned를 사용할 때도 딱히 의도하고 사용한 것이 아닌 API에�
 integer1.toUnsignedLong()
 ```
 
-# 그래도 나는 unsigned를 원한다 
+## 그래도 나는 unsigned를 원한다 
 Unsigned type을 그래도 사용해야 할 상황이 생긴다. 위에서 말한 Checksum을 구하는 경우 unsigned로 표현하여 출력해줘야 할 경우가 생긴다. 이럴 경우 어떻게 Unsigned type을 사용해야 하는지 알아보자.
 
-## Unsigned Integer
+### Unsigned Integer
 
 4바이트의 signed Integer의 표현범위는 $$-2 ^ {31} , 2^{31} -1$$ 이다. Unsigned Integer의 표현범위는 $$0, 2^{32} -1$$ 이다. 
 
@@ -39,7 +39,7 @@ Unsigned type을 그래도 사용해야 할 상황이 생긴다. 위에서 말�
 
 여기서 알 수 있는 점은 단순히 Checksum을 구현할 때는 signed type을 그대로 사용해도 괜찮다. 다만 주의할 점은 byte Array에서 4개씩 뽑아내어 Unsigned Integer을 만들어 그 값을 사용한다면 이야기가 달라진다. 
 
-## byte [] 에서 unsigned integer 뽑아내기
+### byte [] 에서 unsigned integer 뽑아내기
 
 어떤 바이너리 파일에있는 값을 hex로 바꾸어 표현해 보았을때 다음과 같다 가정해보자.
 
@@ -127,22 +127,22 @@ for (int i = 0; i < binaryArray.length; i +=4) {
 }
 ```
 
-# 느낀점
+## 느낀점
 
 Unsigned type의 사용 이유를 다시 한 번 생각하게 되었다. 어차피 모든 연산은 signed type에서 처리할 수 있다(같은 type 과의 연산에서). unsigned의 이유는 연산과정에서 편의를 위한 것인지도 모르겠다. 사실 이건 매우 오만한 발언이다. 조금 더 unsigned에 관한 공부를 하고 다시 고슬링의 말을 생각해야겠다.
 
-# 부록: Unsigned로 캐스팅하기
+## 부록: Unsigned로 캐스팅하기
 
 ```byte, short, int``` type의 unsigned type으로 캐스팅을 소개로 글을 마치고자한다. 
 
 사실 이것은 unsigned 캐스팅이라고 볼 수는 없고 해당 type보다 한 단계 높은 type에 값을 저장하는 것이다. (그래서 long의 경우를 제외하고 소개한다.) 프로젝트에서 표현해야 할 값이 해당 type보다 크다면 그냥 한 단계 더 큰 type을 쓰는 걸 추천한다. 
 
-## 공통 두 줄 요약
+### 공통 두 줄 요약
 
 1.  한 단계 높은 type으로 캐스팅한다.
 2.  캐스팅한 값에 원래 type의 bit부분을 제외하고 0으로 마스킹한다.
 
-## byte (8 bits)
+### byte (8 bits)
 
 ```java
 /**
@@ -153,7 +153,7 @@ unsignedByte = (short) b;
 unsignedByte = unsignedByte & 0xFF;
 ```
 
-## short (16 bits)
+### short (16 bits)
 
 ```java
 /**
@@ -164,7 +164,7 @@ unsignedShort = (int) s;
 unsignedShort = unsignedShort & 0xFFFF;
 ```
 
-## int (32 bits)
+### int (32 bits)
 
 ```java
 /**
