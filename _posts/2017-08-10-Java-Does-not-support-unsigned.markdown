@@ -39,7 +39,7 @@ Unsigned type을 그래도 사용해야 할 상황이 생긴다. 위에서 말�
 
 4바이트의 signed Integer의 표현범위는 $$-2 ^ {31} , 2^{31} -1$$ 이다. Unsigned Integer의 표현범위는 $$0, 2^{32} -1$$ 이다. 
 
-사실 __연산__이라는 측면에서는 signed type과 unsigned type을 구분할 필요는 없다. signed type에서  $$2^{31} -1$$ 을 넘어가는 숫자를 입력한다고 해도 Unsigned type의 $$2^{32} -1$$ 까지 입력이 가능하다. 단순히 출력값으로 표현될 때 표현 범위가 초과하면 해당하는 음수 값을 보여주는 것 뿐이다.
+사실 **연산**이라는 측면에서는 signed type과 unsigned type을 구분할 필요는 없다. signed type에서  $$2^{31} -1$$ 을 넘어가는 숫자를 입력한다고 해도 Unsigned type의 $$2^{32} -1$$ 까지 입력이 가능하다. 단순히 출력값으로 표현될 때 표현 범위가 초과하면 해당하는 음수 값을 보여주는 것 뿐이다.
 
 여기서 알 수 있는 점은 단순히 Checksum을 구현할 때는 signed type을 그대로 사용해도 괜찮다. 다만 주의할 점은 byte Array에서 4개씩 뽑아내어 Unsigned Integer을 만들어 그 값을 사용한다면 이야기가 달라진다. 
 
