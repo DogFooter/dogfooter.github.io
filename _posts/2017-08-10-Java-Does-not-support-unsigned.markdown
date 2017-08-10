@@ -175,3 +175,5 @@ unsignedInt = (long) s;
 unsignedInt = unsignedInt & 0xFFFFFFFF;
 ```
 
+## 출처
+https://stackoverflow.com/questions/9578639/best-way-to-convert-a-signed-integer-to-an-unsigned-long
