@@ -34,7 +34,8 @@ permalink: /:title/
 google_analytics: UA-91398386-1
 disqus: 
     shortname: https-dogfooter-github-io
-    site: blog
+    categories: 
+    - blog
 
 # if you don't have any of social below, comment the line
 facebook: myfacebook
