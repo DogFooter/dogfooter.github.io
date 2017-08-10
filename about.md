@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>공부하고 일하면서 얻게된 글을 적는 블로그입니다.</p>
+<p>공부하고 일하면서 얻게된 정보를 적는 블로그입니다.</p>
 
 <h2>Skills</h2>
 
