@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java에서 Unsigned를 만났을 때
-tags: [Java, Unsigned, unsigned int, 자바]
+tag: [Java, Unsigned, unsigned int, 자바]
 category: blog
 date: 2017-08-10 14:10
 headerImage: false
