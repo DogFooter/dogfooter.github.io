@@ -6,6 +6,14 @@ layout: page
 
 <p>공부하고 일하면서 얻게된 정보를 적는 블로그입니다.</p>
 
+<h2>Interesting</h2>
+
+<ul class="skill-list">
+	<li>Distributed System</li>
+	<li>Hadoop</li>
+</ul>
+
+
 <h2>Skills</h2>
 
 <ul class="skill-list">
