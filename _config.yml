@@ -6,7 +6,8 @@ description: > # this means to ignore newlines until "baseurl:"
 
 
  # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: '/'
+baseurl: 'hello'
+url: 'https://dogfooter.github.io'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
